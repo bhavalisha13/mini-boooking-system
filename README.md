@@ -34,7 +34,16 @@ npm install
 
 ### 3. Configure environment variables
 
-Create a `.env` file in the project root and configure the PostgreSQL connection using the environment variable name expected by `lib/db.ts`.
+
+Create a `.env` file in the project root and add your PostgreSQL connection string:
+
+```env
+DATABASE_URL=postgresql://USERNAME:PASSWORD@HOST:5432/DATABASE_NAME
+```
+
+Replace `USERNAME`, `PASSWORD`, `HOST`, and `DATABASE_NAME` with your PostgreSQL database details.
+
+For example, if PostgreSQL is running locally, `HOST` is usually `localhost` and the default port is `5432`.
 
 Do not commit your `.env` file or publish database credentials.
 
